@@ -32,6 +32,16 @@ data:
   gitlab-auth-auth-url: {{ default "" .Values.concourse.gitlabAuthAuthUrl | quote }}
   gitlab-auth-token-url: {{ default "" .Values.concourse.gitlabAuthTokenUrl | quote }}
   gitlab-auth-api-url: {{ default "" .Values.concourse.gitlabAuthApiUrl | quote }}
+  bitbucket-cloud-auth-team: {{ default "" .Values.concourse.bitbucketCloudAuthTeam | quote }}
+  bitbucket-cloud-auth-repository: {{ default "" .Values.concourse.bitbucketCloudAuthRepository | quote }}
+  bitbucket-cloud-auth-auth-url: {{ default "" .Values.concourse.bitbucketCloudAuthAuthUrl | quote }}
+  bitbucket-cloud-auth-token-url: {{ default "" .Values.concourse.bitbucketCloudAuthTokenUrl | quote }}
+  bitbucket-cloud-auth-api-url: {{ default "" .Values.concourse.bitbucketCloudAuthApiUrl | quote }}
+  bitbucket-server-auth-project: {{ default "" .Values.concourse.bitbucketServerAuthProject | quote }}
+  bitbucket-server-auth-repository: {{ default "" .Values.concourse.bitbucketServerAuthRepository | quote }}
+  bitbucket-server-auth-auth-url: {{ default "" .Values.concourse.bitbucketServerAuthAuthUrl | quote }}
+  bitbucket-server-auth-token-url: {{ default "" .Values.concourse.bitbucketServerAuthTokenUrl | quote }}
+  bitbucket-server-auth-api-url: {{ default "" .Values.concourse.bitbucketServerAuthApiUrl | quote }}
   generic-oauth-display-name: {{ default "" .Values.concourse.genericOauthDisplayName | quote }}
   generic-oauth-auth-url: {{ default "" .Values.concourse.genericOauthAuthUrl | quote }}
   generic-oauth-auth-url-param: {{ default "" .Values.concourse.genericOauthAuthUrlParam | quote }}
@@ -41,6 +51,6 @@ data:
   worker-fatal-errors: {{ default "" .Values.worker.fatalErrors | quote }}
   {{ if .Values.credentialManager.vault }}
   vault-url: {{ default "" .Values.credentialManager.vault.url | quote }}
-  vault-path-prefix: {{ default "/concourse" .Values.credentialManager.vault.pathPrefix | quote }} 
+  vault-path-prefix: {{ default "/concourse" .Values.credentialManager.vault.pathPrefix | quote }}
   vault-auth-backend: {{ default "" .Values.credentialManager.vault.authBackend | quote }}
   {{ end }}

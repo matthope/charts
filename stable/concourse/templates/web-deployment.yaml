@@ -211,6 +211,84 @@ spec:
                 configMapKeyRef:
                   name: {{ template "concourse.concourse.fullname" . }}
                   key: gitlab-auth-api-url
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-client-id
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-client-secret
+            {{- if .Values.concourse.bitbucketCloudAuthTeam }}
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_TEAM
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-team
+            {{- end }}
+            {{- if .Values.concourse.bitbucketCloudAuthRepository }}
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_REPOSITORY
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-repository
+            {{- end }}
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_AUTH_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-auth-url
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_TOKEN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-token-url
+            - name: CONCOURSE_BITBUCKET_CLOUD_AUTH_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-cloud-auth-api-url
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-client-id
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-client-secret
+            {{- if .Values.concourse.bitbucketServerAuthProject }}
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_PROJECT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-project
+            {{- end }}
+            {{- if .Values.concourse.bitbucketServerAuthRepository }}
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_REPOSITORY
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-repository
+            {{- end }}
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_AUTH_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-auth-url
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_TOKEN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-token-url
+            - name: CONCOURSE_BITBUCKET_SERVER_AUTH_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "concourse.concourse.fullname" . }}
+                  key: bitbucket-server-auth-api-url
             - name: CONCOURSE_GENERIC_OAUTH_DISPLAY_NAME
               valueFrom:
                 configMapKeyRef:

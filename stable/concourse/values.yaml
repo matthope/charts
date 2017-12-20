@@ -249,6 +249,67 @@ concourse:
   ##
   # gitlabAuthApiUrl:
 
+
+
+
+
+
+
+
+
+
+  ## Application client ID for enabling Bitbucket (Cloud) OAuth.
+  ##
+  # bitbucketCloudAuthClientId:
+
+  ## Application client secret for enabling Bitbucket (Cloud) OAuth.
+  ##
+  # bitbucketCloudAuthClientSecret:
+
+  ## Bitbucket teams which members are allowed to log in.
+  ##
+  # bitbucketCloudAuthTeam:
+
+  ## Bitbucket repositories whose members are allowed to log in.
+  ##
+  # bitbucketCloudAuthRepository:
+
+  ## Endpoint AuthURL for Bitbucket (Cloud) OAuth.
+  ##
+  # bitbucketCloudAuthAuthUrl:
+
+  ## Endpoint TokenURL for Bitbucket (Cloud) OAuth.
+  ##
+  # bitbucketCloudAuthTokenUrl:
+
+  ## API endpoint URL for Bitbucket (Cloud) OAuth.
+  ##
+  # bitbucketCloudAuthApiUrl:
+
+  ## Application client ID for enabling Bitbucket (Server) OAuth.
+  ##
+  # bitbucketServerAuthClientId:
+
+  ## Application client secret for enabling Bitbucket (Server) OAuth.
+  ##
+  # bitbucketServerAuthClientSecret:
+
+  ## Bitbucket projects whose members are allowed to log in.
+  ##
+  # bitbucketServerAuthProject:
+
+  ## Endpoint AuthURL for Bitbucket (Server) server.
+  ##
+  # bitbucketServerAuthAuthUrl:
+
+  ## Endpoint TokenURL for Bitbucket (Server) server.
+  ##
+  # bitbucketServerAuthTokenUrl:
+
+  ## API endpoint URL for Bitbucket (Server) server.
+  ##
+  # bitbucketServerAuthApiUrl:
+
   ## Name for this auth method on the web UI.
   ##
   # genericOauthDisplayName:
