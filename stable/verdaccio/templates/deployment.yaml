@@ -31,6 +31,13 @@ spec:
         - name: {{ template "verdaccio.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.secrets }}
+          envFrom:
+          {{- range $value := .Values.secrets }}
+            - secretRef:
+                name: {{ $value | quote }}
+          {{- end }}
+          {{- end }}
           ports:
             - containerPort: 4873
               name: http

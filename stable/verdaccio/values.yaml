@@ -112,6 +112,12 @@ configMap: |
     - {type: stdout, format: pretty, level: http}
     #- {type: file, path: verdaccio.log, level: info}
 
+secrets: []
+## Which secrets to include in environment variables?
+## This is useful for setting uplink tokens - https://verdaccio.org/docs/en/uplinks
+#  - secretName
+#  - secretName2
+
 persistence:
   enabled: true
   ## A manually managed Persistent Volume and Claim

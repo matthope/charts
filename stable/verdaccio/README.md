@@ -77,6 +77,7 @@ and their default values.
 | `service.port`                     | Service port to expose                                          | `4873`                                                   |
 | `service.nodePort`                 | Service port to expose                                          | none                                                     |
 | `service.type`                     | Type of service to create                                       | `ClusterIP`                                              |
+| `secrets`                          | List of Secrets to use as Environmental variables               | `[]`                                                     |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
